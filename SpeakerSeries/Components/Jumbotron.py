@@ -19,7 +19,8 @@ def Jumbotron() -> pc.Component:
             pc.heading("Tech Speaker Series", size="4xl"),
             pc.heading("Presented By Nate Roberts and Friends", size="md"),
             pc.text(
-                "This is an area to see a Series of Presentation by Tech Professionals from varying backgrounds, countries, and careers."
+                "Welcome to Speaker Series, a website that hosts engaging, informative, inspiring conversations with professionals from the technology sector. Here you can ask questions, listen to their stories, insights, and advice on how they prepared for, entered, survived, and thrived in their careers. Whether you are young or old, a beginner or an expert, a student or a teacher, you will find something valuable and motivating in these presentations. Join us and discover how you can pursue your dreams in the field of technology.",
+                text_align="center",
             ),
             width="90%",
         ),
