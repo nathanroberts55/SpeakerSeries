@@ -4,8 +4,20 @@ from datetime import datetime
 
 curr_year = datetime.now().year
 
+footer_style = {
+    "position": "relative",
+    "width": "100vw",
+    "height": "20vh",
+    "bottom": "0px",
+    "z_index": "5",
+    "background_color": styles.DARK_GRAY,
+    "color": styles.WHITE_SMOKE,
+    "padding": "50px 15px",
+    "margin": "0px",
+}
 
-def Footer():
+
+def Footer() -> pc.Component:
     return pc.center(
         pc.hstack(
             pc.text(
@@ -25,12 +37,5 @@ def Footer():
             ),
         ),
         center_content=True,
-        position="relative",
-        width="100vw",
-        height="20vh",
-        bottom="0px",
-        z_index="5",
-        background_color=styles.DARK_GRAY,
-        color=styles.WHITE_SMOKE,
-        padding="50px 15px",
+        **footer_style,
     )

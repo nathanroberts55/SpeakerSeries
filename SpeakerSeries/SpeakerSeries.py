@@ -4,8 +4,8 @@ from pcconfig import config
 from SpeakerSeries import styles
 from .Components.Navbar import Navbar
 from .Components.Jumbotron import Jumbotron
-from .Components.SpeakerCard import SpeakerCard
 from .Components.UpcomingSpeakers import UpcomingSpeakers
+from .Components.Signup import Signup
 from .Components.Footer import Footer
 
 
@@ -15,7 +15,13 @@ class State(pc.State):
 
 def index() -> pc.Component:
     return pc.center(
-        pc.vstack(Navbar(), Jumbotron(), UpcomingSpeakers(), Footer()),
+        pc.vstack(
+            Navbar(),
+            Jumbotron(),
+            UpcomingSpeakers(),
+            Signup(),
+            Footer(),
+        ),
         content_center=True,
         background_color=styles.WHITE_SMOKE,
     )
