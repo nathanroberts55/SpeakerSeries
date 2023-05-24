@@ -15,18 +15,18 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: true
-      - name: Check Node Version
-        run: node -v
-      - name: Install NextJS Requirements
-        run: npm install next@13.3.1
+      # - name: Check Node Version
+      #   run: node -v
+      # - name: Install NextJS Requirements
+      #   run: npm install next@13.3.1
       - name: Install Python Requirements
         run: pip install -r requirements.txt
       - name: Initilize App
         run: pc init
       - name: List Directory
         run: ls -la
-      - name: NPM Install
-        run: npm install
+      # - name: NPM Install
+      #   run: npm install
       - name: Build Static App
         run: pc export --no-zip
       - name: Deploy
