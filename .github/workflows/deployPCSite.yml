@@ -23,11 +23,14 @@ jobs:
       - name: Initilize App
         run: pc init
       # Remove Node Modules and Install Required Node Packages
-      # - name: Change Directory and Remove node_modules
-      #   run: cd .web && rm -rf node_modules && npm install && cd ..
+      - name: Change Directory and Remove node_modules
+        run: cd .web && rm -rf node_modules && npm install && cd ..
       # Build The Pynecone App
-      # - name: Build Static App
-      #   run: pc export --frontend-only --no-zip
+      - name: Build Static App
+        run: pc export --frontend-only --no-zip
+      # Copy the SWA Config
+      - name: Copy the SWA Config
+        run: cp staticwebapp.config.json /.web/_static/staticwebapp.config.json
       # Deploy App to Azure
       - name: Deploy
         id: builddeploy
@@ -38,9 +41,9 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/.web" # App source code path
+          app_location: "/.web/_static" # App source code path
           api_location: "" # Api source code path - optional
-          output_location: "/out" # Built app content directory - optional
-          app_build_command: npm run build
+          output_location: "" # Built app content directory - optional
+          # app_build_command: npm run build
           ###### End of Repository/Build Configurations ######
-          # skip_app_build: true
+          skip_app_build: true
