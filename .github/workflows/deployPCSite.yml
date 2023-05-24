@@ -17,6 +17,8 @@ jobs:
           submodules: true
       - name: Install requirements
         run: pip install -r requirements.txt
+      - name: Initilize App
+        run: pc init
       - name: Build Static App
         run: pc export --frontend-only --no-zip
       - name: Deploy
