@@ -3,7 +3,7 @@ name: Azure Static Web Apps CI/CD
 on:
   push:
     branches:
-      - main
+      - pastSpeakersUI
 
 jobs:
   build_and_deploy_job:
@@ -25,8 +25,8 @@ jobs:
         run: ls -la
       - name: Change Directory and Remove node_modules
         run: cd .web && ls -la && rm -rf node_modules && npm install && cd ..
-      - name: Build Static App
-        run: pc export --frontend-only --no-zip
+      # - name: Build Static App
+      #   run: pc export --frontend-only --no-zip
       - name: Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -36,8 +36,9 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/.web/_static/" # App source code path
+          app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
-          output_location: "" # Built app content directory - optional
+          output_location: ".web/_static/" # Built app content directory - optional
+          app_build_command: pc export --no-zip
           ###### End of Repository/Build Configurations ######
           skip_app_build: true
