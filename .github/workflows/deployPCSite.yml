@@ -25,7 +25,7 @@ jobs:
       - name: List Directories
         run: ls -la
       - name: Change Directory and Remove node_modules
-        run: cd .web && ls -la && Srm -rf node_modules && npm install && cd ..
+        run: cd .web && ls -la && rm -rf node_modules && npm install && cd ..
       - name: Build Static App
         run: pc export --no-zip
       - name: Deploy
