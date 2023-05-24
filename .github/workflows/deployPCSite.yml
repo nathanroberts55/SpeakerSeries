@@ -30,7 +30,7 @@ jobs:
         run: pc export --frontend-only --no-zip
       # Copy the SWA Config
       - name: Copy the SWA Config
-        run: cp staticwebapp.config.json /.web/_static/staticwebapp.config.json
+        run: mv staticwebapp.config.json /.web/_static/
       # Deploy App to Azure
       - name: Deploy
         id: builddeploy
