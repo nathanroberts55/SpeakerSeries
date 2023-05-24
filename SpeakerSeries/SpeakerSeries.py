@@ -6,6 +6,7 @@ from .Components.Navbar import Navbar
 from .Components.Jumbotron import Jumbotron
 from .Components.UpcomingSpeakers import UpcomingSpeakers
 from .Components.Signup import Signup
+from .Components.PastSpeakers import PastSpeakers
 from .Components.Footer import Footer
 
 
@@ -20,6 +21,7 @@ def index() -> pc.Component:
             Jumbotron(),
             UpcomingSpeakers(),
             Signup(),
+            PastSpeakers(),
             Footer(),
         ),
         content_center=True,
