@@ -163,4 +163,8 @@ cython_debug/
 # PyCone Stuff
 pynecone.db
 
-.web
+!.web/
+.web/*
+
+!.web/_static/
+
