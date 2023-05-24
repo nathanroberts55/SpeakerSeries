@@ -27,10 +27,10 @@ jobs:
         run: cd .web && rm -rf node_modules && npm install && cd ..
       # Build The Pynecone App
       - name: Build Static App
-        run: pc export --frontend-only --no-zip
+        run: pc export --no-zip
       # Copy the SWA Config
       - name: Copy the SWA Config
-        run: mv staticwebapp.config.json /.web/_static/
+        run: cp staticwebapp.config.json .web/_static/
       # Deploy App to Azure
       - name: Deploy
         id: builddeploy
