@@ -16,7 +16,7 @@ jobs:
         with:
           submodules: true
       - name: Install NextJS Requirements
-        run: npm install next@12
+        run: npm install next@13
       - name: Install Python Requirements
         run: pip install -r requirements.txt
       - name: Initilize App
