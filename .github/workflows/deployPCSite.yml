@@ -23,8 +23,8 @@ jobs:
       - name: Initilize App
         run: pc init
       # Remove Node Modules and Install Required Node Packages
-      # - name: Change Directory and Remove node_modules
-      #   run: cd .web && rm -rf node_modules && npm install && cd ..
+      - name: Change Directory and Remove node_modules
+        run: cd .web && rm -rf node_modules && npm install && cd ..
       # Build The Pynecone App
       # - name: Build Static App
       #   run: pc export --no-zip
