@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
+      - name: NPM Install
+        run: npm install
       - uses: actions/checkout@v3
         with:
           submodules: true
@@ -25,8 +27,6 @@ jobs:
         run: pc init
       - name: List Directory
         run: ls -la
-      # - name: NPM Install
-      #   run: npm install
       - name: Build Static App
         run: pc export --no-zip
       - name: Deploy
