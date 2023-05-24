@@ -14,7 +14,7 @@ jobs:
     steps:
         # Install NextJS on the Machine
       - name: Install NextJS Requirements
-        run: npm install -g next@13.3.1 @chakra-ui/react @emotion/react focus-visible
+        run: npm install -g next@13.3.1
         # Checkout into the Branch from the Repo
       - uses: actions/checkout@v3
       # Install Python Requirements on the Machine
@@ -22,6 +22,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: Initilize App
         run: pc init
+      - name: Change Directory and Remove node_modules
+        run: cd /.web && ls -la && Srm -rf node_modules && npm install && cd ..
       - name: Build Static App
         run: pc export --no-zip
       - name: Deploy
