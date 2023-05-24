@@ -25,6 +25,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: Initilize App
         run: pc init
+      - name: Run App
+        run: pc run
       - name: List Directory
         run: ls -la .web
       - name: Build Static App
