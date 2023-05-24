@@ -41,4 +41,4 @@ jobs:
           output_location: ".web/_static/" # Built app content directory - optional
           app_build_command: pc export --no-zip
           ###### End of Repository/Build Configurations ######
-          skip_app_build: true
+          # skip_app_build: true
