@@ -15,7 +15,7 @@ jobs:
       # - name: NPM Install
       #   run: npm install
       - name: Install NextJS Requirements
-        run: npm install next@13.3.1
+        run: npm install -g next@13.3.1
       - uses: actions/checkout@v3
         with:
           submodules: true
