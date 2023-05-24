@@ -37,6 +37,7 @@ def SignupForm() -> pc.Component:
                         width="50%",
                         margin=["0.25em", "0.25em"],
                     ),
+                    color="black",
                 )
             ),
             pc.button(
