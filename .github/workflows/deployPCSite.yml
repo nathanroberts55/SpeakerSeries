@@ -24,7 +24,7 @@ jobs:
         run: pc init
       # Remove Node Modules and Install Required Node Packages
       - name: Change Directory and Remove node_modules
-        run: cd .web && rm -rf node_modules && cd ..
+        run: cd .web && rm -rf node_modules && cd npm install && cd ..
       # Remove Node Modules and Install Required Node Packages
       # - name: List Directories
       #   run: ls -la .web/utils
