@@ -19,9 +19,9 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: true
-      # Copy the config into the repo
-      - name: Copy Config into Repo
-        run: cp statwebbapp.config.json .web/statwebbapp.config.json
+        # Copy the config into the repo
+      # - name: Copy Config into Repo
+      #   run: cp /statwebbapp.config.json .web/statwebbapp.config.json
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
