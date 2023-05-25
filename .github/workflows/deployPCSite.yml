@@ -50,4 +50,4 @@ jobs:
           app_build_command: npm run export
           ###### End of Repository/Build Configurations ######
           # skip_app_build: true
-          skip_api_build: True
+          skip_api_build: true
