@@ -30,7 +30,7 @@ jobs:
       #   run: ls -la .web/utils
       # Build The Pynecone App
       - name: Build Static App
-        run: pc export
+        run: pc export --no-zip
       # Copy the SWA Config
       # - name: Copy the SWA Config
       #   run: cp staticwebapp.config.json .web/_static/
