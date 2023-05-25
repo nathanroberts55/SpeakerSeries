@@ -27,7 +27,7 @@ jobs:
         run: cd .web && rm -rf node_modules && cd ..
       # Remove Node Modules and Install Required Node Packages
       - name: List Directories
-        run: ls -la .web && ls -la .web/utils
+        run: ls -la .web/utils
       # Build The Pynecone App
       # - name: Build Static App
       #   run: pc export --no-zip
