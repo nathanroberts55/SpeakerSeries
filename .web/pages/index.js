@@ -78,8 +78,9 @@ export default function Component() {
   <Spacer/>
 </HStack>
 </Box>
-  <Center sx={{"width": "100vw", "minHeight": "50vh", "height": "fit-content", "color": "white", "background": "linear-gradient(324deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)", "centerContent": true}}>
-  <VStack sx={{"width": "90%"}}>
+  <Box sx={{"maxWidth": "80%", "paddingX": ["1em", "2em", "3em"], "alignItems": "center"}}>
+  <Center sx={{"width": "100%", "minHeight": "50vh", "height": "fit-content", "color": "white", "background": "linear-gradient(324deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)", "borderRadius": "2em", "boxShadow": "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", "centerContent": true}}>
+  <VStack sx={{"width": "60%"}}>
   <Heading size="4xl" sx={{"fontFamily": "Rajdhani"}}>
   {`Tech Speaker Series`}
 </Heading>
@@ -91,13 +92,13 @@ export default function Component() {
 </Text>
 </VStack>
 </Center>
-  <Box sx={{"width": "60vw", "contentCenter": true}}>
+  <Center sx={{"contentCenter": true}}>
   <VStack>
   <Heading size="2xl" sx={{"margin": ["1em", "1em"], "fontFamily": "Rajdhani"}}>
   {`Upcoming Speakers`}
 </Heading>
-  <Box>
-  <HStack sx={{"width": "100%", "minHeight": "30vh", "height": "fit-content", "backgroundColor": "#47474715", "margin": "15px 0px"}}>
+  <Center>
+  <HStack sx={{"width": "80%", "minHeight": "30vh", "height": "fit-content", "backgroundColor": "#47474715", "margin": "15px 0px", "boxShadow": "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}>
   <Image src="images/stock_headshot_1.jpg" sx={{"width": "10em", "margin": "1.25em"}}/>
   <VStack alignItems="left" sx={{"paddingLeft": "2.5em", "paddingRight": "2.5em"}}>
   <Text sx={{"fontSize": "0.85em", "fontWeight": 300, "fontFamily": "Titillium Web"}}>
@@ -111,9 +112,9 @@ export default function Component() {
 </Text>
 </VStack>
 </HStack>
-</Box>
-  <Box>
-  <HStack sx={{"width": "100%", "minHeight": "30vh", "height": "fit-content", "backgroundColor": "#47474715", "margin": "15px 0px"}}>
+</Center>
+  <Center>
+  <HStack sx={{"width": "80%", "minHeight": "30vh", "height": "fit-content", "backgroundColor": "#47474715", "margin": "15px 0px", "boxShadow": "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}>
   <Image src="images/stock_headshot_1.jpg" sx={{"width": "10em", "margin": "1.25em"}}/>
   <VStack alignItems="left" sx={{"paddingLeft": "2.5em", "paddingRight": "2.5em"}}>
   <Text sx={{"fontSize": "0.85em", "fontWeight": 300, "fontFamily": "Titillium Web"}}>
@@ -127,9 +128,9 @@ export default function Component() {
 </Text>
 </VStack>
 </HStack>
-</Box>
-  <Box>
-  <HStack sx={{"width": "100%", "minHeight": "30vh", "height": "fit-content", "backgroundColor": "#47474715", "margin": "15px 0px"}}>
+</Center>
+  <Center>
+  <HStack sx={{"width": "80%", "minHeight": "30vh", "height": "fit-content", "backgroundColor": "#47474715", "margin": "15px 0px", "boxShadow": "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}}>
   <Image src="images/stock_headshot_1.jpg" sx={{"width": "10em", "margin": "1.25em"}}/>
   <VStack alignItems="left" sx={{"paddingLeft": "2.5em", "paddingRight": "2.5em"}}>
   <Text sx={{"fontSize": "0.85em", "fontWeight": 300, "fontFamily": "Titillium Web"}}>
@@ -143,18 +144,18 @@ export default function Component() {
 </Text>
 </VStack>
 </HStack>
-</Box>
+</Center>
 </VStack>
-</Box>
-  <Center sx={{"centerContent": true, "backgroundColor": "#47474750", "height": "40vh", "width": "100vw", "margin": "0rem"}}>
+</Center>
+  <Center sx={{"centerContent": true, "height": "40vh", "width": "100%", "margin": "0rem"}}>
   <VStack>
-  <Heading size="2xl" sx={{"fontFamily": "Rajdhani"}}>
+  <Heading size="2xl" sx={{"color": "#00D4FF", "fontFamily": "Rajdhani"}}>
   {`Want to Join the Conversation?`}
 </Heading>
   <Text sx={{"fontFamily": "Titillium Web", "fontSize": 16}}>
   {`Fill in the form below to join subscribe and never miss another insightful conversation!`}
 </Text>
-  <Box sx={{"paddingTop": ".5em", "width": "100%", "centerContent": true}}>
+  <Box sx={{"paddingTop": ".5em", "width": "100%"}}>
   <VStack>
   <FormControl>
   <HStack sx={{"color": "black"}}>
@@ -169,8 +170,8 @@ export default function Component() {
 </Box>
 </VStack>
 </Center>
-  <Box sx={{"width": "80wv", "centerContent": true}}>
-  <VStack sx={{"marginBottom": "1em"}}>
+  <Center sx={{"centerContent": true}}>
+  <VStack sx={{"marginBottom": "1em", "width": "80%"}}>
   <Heading size="2xl" sx={{"margin": ["0.5em", "0.5em"], "fontFamily": "Rajdhani"}}>
   {`Past Conversations`}
 </Heading>
@@ -179,9 +180,10 @@ export default function Component() {
 </Text>
   <Spacer/>
   <Box sx={{"width": "100%"}}>
-  <Box dangerouslySetInnerHTML={{"__html": "<iframe height='100%' width='100%' src=https://www.youtube.com/embed/LYl-kxYUnCc title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>"}} sx={{"height": "50vh", "width": "100%"}}/>
+  <Box dangerouslySetInnerHTML={{"__html": "<iframe height='100%' width='100%' src=https://www.youtube.com/embed/LYl-kxYUnCc title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>"}} sx={{"height": "65vh", "width": "100%"}}/>
 </Box>
 </VStack>
+</Center>
 </Box>
   <Center sx={{"centerContent": true, "position": "relative", "width": "100vw", "height": "20vh", "bottom": "0px", "zIndex": "5", "backgroundColor": "#474747", "color": "#F5F5F4", "padding": "50px 15px", "margin": "0px"}}>
   <HStack>

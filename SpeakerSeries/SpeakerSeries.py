@@ -8,6 +8,7 @@ from .Components.UpcomingSpeakers import UpcomingSpeakers
 from .Components.Signup import Signup
 from .Components.PastSpeakers import PastSpeakers
 from .Components.Footer import Footer
+from .Components.Content import Content
 
 
 class State(pc.State):
@@ -18,10 +19,12 @@ def index() -> pc.Component:
     return pc.center(
         pc.vstack(
             Navbar(),
-            Jumbotron(),
-            UpcomingSpeakers(),
-            Signup(),
-            PastSpeakers(),
+            Content(
+                Jumbotron(),
+                UpcomingSpeakers(),
+                Signup(),
+                PastSpeakers(),
+            ),
             Footer(),
         ),
         content_center=True,

@@ -2,11 +2,12 @@ import pynecone as pc
 from SpeakerSeries import styles
 
 card_style = {
-    "width": "100%",
+    "width": "80%",
     "min_height": "30vh",
     "height": "fit-content",
     "background_color": f"{styles.DARK_GRAY + '15'}",
     "margin": "15px 0px",
+    "box_shadow": "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
 }
 
 date_style = {"font_size": "0.85em", "font_weight": styles.LIGHT_WEIGHT}
@@ -17,7 +18,7 @@ class SpeakerCard_State(pc.State):
 
 
 def SpeakerCard(image_src, name, desc, date="TBD") -> pc.Component:
-    return pc.box(
+    return pc.center(
         pc.hstack(
             # Speaker Image
             pc.image(src=image_src, width="10em", margin="1.25em"),
@@ -39,7 +40,7 @@ def SpeakerCard(image_src, name, desc, date="TBD") -> pc.Component:
 
 
 def UpcomingSpeakers() -> pc.Component:
-    return pc.box(
+    return pc.center(
         pc.vstack(
             pc.heading(
                 "Upcoming Speakers",
@@ -64,6 +65,5 @@ def UpcomingSpeakers() -> pc.Component:
                 "Sept. 24, 2024",
             ),
         ),
-        width="60vw",
         content_center=True,
     )

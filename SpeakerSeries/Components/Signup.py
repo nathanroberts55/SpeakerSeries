@@ -2,9 +2,8 @@ import pynecone as pc
 from SpeakerSeries import styles
 
 signup_section_style = {
-    "background_color": f"{styles.DARK_GRAY + '50'}",
     "height": "40vh",
-    "width": "100vw",
+    "width": "100%",
     "margin": "0rem",
 }
 
@@ -45,14 +44,15 @@ def SignupForm() -> pc.Component:
             ),
         ),
         **signup_form_style,
-        center_content=True,
     )
 
 
 def Signup() -> pc.Component:
     return pc.center(
         pc.vstack(
-            pc.heading("Want to Join the Conversation?", size="2xl"),
+            pc.heading(
+                "Want to Join the Conversation?", size="2xl", color=styles.SKY_BLUE
+            ),
             pc.text(
                 "Fill in the form below to join subscribe and never miss another insightful conversation!"
             ),
