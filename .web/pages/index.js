@@ -12,7 +12,7 @@ const EVENT = "ws://localhost:8000/event"
 const UPLOAD = "http://localhost:8000/upload"
 
 export default function Component() {
-  const [state, setState] = useState({"is_hydrated": false, "title": "Speaker Series", "events": [{"name": "state.hydrate"}], "files": []})
+  const [state, setState] = useState({"attendee_email": "", "attendee_name": "", "is_hydrated": false, "events": [{"name": "state.hydrate"}], "files": []})
   const [result, setResult] = useState({"state": null, "events": [], "processing": false})
   const router = useRouter()
   const socket = useRef(null)
